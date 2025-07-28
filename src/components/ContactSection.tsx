@@ -11,7 +11,7 @@ const ContactSection = () => {
 
       <div className="max-w-6xl mx-auto text-center">
         {/* Fivost Logo */}
-        <img src="/Fivost-logo.png" alt="Fivost Logo" className="mx-auto mb-6 w-14 h-14 object-contain" />
+        <img src="Fivost-logo.png" alt="Fivost Logo" className="mx-auto mb-6 w-14 h-14 object-contain" />
         {/* Heading */}
         <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-4">
           <span className="bg-gradient-accent bg-clip-text text-transparent">

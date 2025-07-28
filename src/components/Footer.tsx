@@ -17,7 +17,7 @@ const Footer = () => {
         {/* Logo */}
         <div className="flex justify-center mb-8">
           <div className="flex items-center gap-2">
-            <img src="/Fivost-logo.png" alt="Fivost Logo" className="w-10 h-10 object-contain" />
+            <img src="Fivost-logo.png" alt="Fivost Logo" className="w-10 h-10 object-contain" />
             <span className="text-xl font-bold text-foreground">FIVOST</span>
           </div>
         </div>

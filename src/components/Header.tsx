@@ -6,7 +6,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <img src="/Fivost-logo.png" alt="Fivost Logo" className="w-10 h-10 object-contain" />
+          <img src="Fivost-logo.png" alt="Fivost Logo" className="w-10 h-10 object-contain" />
           <span className="text-xl font-bold text-foreground">FIVOST</span>
         </div>
 
