@@ -5,8 +5,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // Set base path for GitHub Pages - matches your repository name 'fivost'
-  base: mode === 'production' ? '/fivost/' : '/',
+  // Conditional base path: GitHub Pages uses /fivost/, Netlify uses /
+  base: process.env.DEPLOY_TARGET === 'gh-pages' ? '/fivost/' : '/',
   
   // Development server configuration
   server: {
@@ -14,11 +14,11 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   
-  // Build configuration optimized for GitHub Pages
+  // Build configuration
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    sourcemap: false, // Disable sourcemaps for smaller build size
+    sourcemap: false,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -32,7 +32,6 @@ export default defineConfig(({ mode }) => ({
   // Plugins configuration
   plugins: [
     react(),
-    // Only use componentTagger in development
     mode === 'development' && componentTagger(),
   ].filter(Boolean),
   
@@ -43,7 +42,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   
-  // Preview server configuration (for npm run preview)
+  // Preview server configuration
   preview: {
     port: 4173,
     host: true,
