@@ -5,8 +5,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // Conditional base path: GitHub Pages uses /fivost/, Netlify uses /
-  base: process.env.DEPLOY_TARGET === 'gh-pages' ? '/fivost/' : '/',
+  // Always use root path for Netlify deployment
+  base: '/',
   
   // Development server configuration
   server: {
